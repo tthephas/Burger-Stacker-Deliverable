@@ -1,11 +1,11 @@
-import React, {Component} from "react";
+import React, { useState } from "react";
 import BurgerStack from "./BurgerStack";
 import Ingredient from './Ingredients'
 
 //// overall ingredients to grab LEFT
 
-class IngredientList extends Component {
-    render () { 
+function IngredientList (props) {
+
         
           const allIngredients = this.props.ingredients.map((ingred, idx) => (
 
@@ -26,5 +26,5 @@ class IngredientList extends Component {
                 </ul>
             </section>
         )}
-    }
+    
 export default IngredientList;

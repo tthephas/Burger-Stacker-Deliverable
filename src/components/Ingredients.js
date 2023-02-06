@@ -1,8 +1,8 @@
-import React, {Component} from "react";
+import React, { useState } from "react";
 
 
-class Ingredient extends Component {
-    render () { 
+function Ingredient (props) {
+
         const { name, color } = this.props.ingredient
         return (
             <div
@@ -13,7 +13,7 @@ class Ingredient extends Component {
                 {name}
             </div>
         )
-    }
+
 }
 
 export default Ingredient

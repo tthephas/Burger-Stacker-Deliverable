@@ -1,18 +1,16 @@
-import React, {Component} from "react";
+import React, { useState } from "react";
 import Ingredient from "./Ingredients";
 
-class BurgerStack extends Component {
+function BurgerStack (props) {
 
-    
-    render () { 
         // const newStack = props.newstack.map((newstack) => <li>{newStack}</li>)
 
-        let burgerSlices = this.props.ingredients.map((ingred, idx) => (
+        let burgerSlices = props.ingredients.map((ingred, idx) => (
             <li key={idx}>
                 <Ingredient 
                     itemKey={idx}
                     ingredient={ingred}
-                    clickFunc={this.props.remove}
+                    clickFunc={props.remove}
                 />
                  </li>
         ))
@@ -25,11 +23,11 @@ class BurgerStack extends Component {
             </ul>
             
             <button  
-                    onClick={this.props.clear}>Clear Burger
+                    onClick={props.clear}>Clear Burger
             </button>
             </div>
         )
-    }
+    
 }
 
 
