@@ -37,8 +37,10 @@ const BurgerPane = () => {
         //console.log('what was clicked', e.target)
         console.log(`clicked on ${ingName} and it is ${ingColor}`)
 
+        //includes and adds it on top to existing
+        // fancy way of changing this array
         setIngredients(
-            [{ name: ingName, color: ingColor }, ...myBurger] //includes and adds it on top to existing
+            [{ name: ingName, color: ingColor }, ...myBurger] 
         )
         console.log(myBurger)
     }
