@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { useState } from "react";
 import './App.css';
 import BurgerPane from "./components/BurgerPane";
 

@@ -3,24 +3,7 @@ import BurgerStack from "./BurgerStack";
 import IngredientList from "./IngredientList";
 
 function BurgerPane (props) {
-    // state = {
-    //     ingredients: [
-    //         {name: 'Kaiser Bun', color: 'saddlebrown'},
-    //         {name: 'Sesame Bun', color: 'sandybrown'},
-    //         {name: 'Gluten Free Bun', color: 'peru'},
-    //         {name: 'Lettuce Wrap', color: 'olivedrab'},
-    //         {name: 'Beef Patty', color: '#3F250B'},
-    //         {name: 'Soy Patty', color: '#3F250B'},
-    //         {name: 'Black Bean Patty', color: '#3F250B'},
-    //         {name: 'Chicken Patty', color: 'burlywood'},
-    //         {name: 'Lettuce', color: 'lawngreen'},
-    //         {name: 'Tomato', color: 'tomato'},
-    //         {name: 'Bacon', color: 'maroon'},
-    //         {name: 'Onion', color: 'lightyellow'},
-    //         {name: 'Cheese', color: 'gold'}
-    //     ],
-    //     burgerIngredients: []
-    // }
+
     const ingredientsArray = [
             {name: 'Kaiser Bun', color: 'saddlebrown'},
             {name: 'Sesame Bun', color: 'sandybrown'},
@@ -38,9 +21,13 @@ function BurgerPane (props) {
         ]
     
     // function array for the burger stack
-    const burgerIngredients = []
+    //const burgerIngredients = []
     
-    const [ingredients, setIngredients] = useState(ingredientsArray)
+    
+    //const [Leftingredients, setLEftIngredients] = useState(ingredientsArray)
+    
+
+    const [myBurger, setIngredients] = useState([])
 
     
     const addToStack = (e) => {
@@ -52,11 +39,12 @@ function BurgerPane (props) {
         console.log(`clicked on ${ingName} and it is ${ingColor}`)
 
         setIngredients({
-            burgerIngredients: [
+            myBurger: [
                 { name: ingName, color: ingColor },
-                ...burgerIngredients //includes and adds it on top to existing
+                ...myBurger //includes and adds it on top to existing
             ]
         })
+        console.log(myBurger)
     }
     
         // function to remove one item from the burger stack
@@ -82,8 +70,7 @@ function BurgerPane (props) {
             burgerIngredients: []
         })
     }
-    
-    
+
         return (
             <>
             <div className="ingredientPane"> Ingredients
@@ -97,7 +84,7 @@ function BurgerPane (props) {
             <BurgerStack 
             
             // ingredients={this.state.burgerIngredients}
-            ingredients={burgerIngredients}
+            ingredients={myBurgerArray}
             remove={removeFromStack}
             clear={clearBurger}
             />
