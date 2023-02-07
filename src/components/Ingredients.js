@@ -3,12 +3,12 @@ import React, { useState } from "react";
 
 function Ingredient (props) {
 
-        const { name, color } = this.props.ingredient
+        const { name, color } = props.ingredient
         return (
             <div
                 style={{backgroundColor: color}}
-                id={this.props.itemKey}
-                onClick={this.props.clickFunc}
+                id={props.itemKey}
+                onClick={props.clickFunc}
             >
                 {name}
             </div>

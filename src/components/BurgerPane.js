@@ -36,9 +36,9 @@ function BurgerPane (props) {
             {name: 'Onion', color: 'lightyellow'},
             {name: 'Cheese', color: 'gold'}
         ]
-
+    
     // function array for the burger stack
-    //const burgerIngredients = []
+    const burgerIngredients = []
     
     const [ingredients, setIngredients] = useState(ingredientsArray)
 
@@ -90,8 +90,8 @@ function BurgerPane (props) {
 
             <IngredientList 
             
-            ingredients={ingredients}
-                    add={addToStack}
+            ingredients={ingredientsArray}
+            add={addToStack}
             />
             </div>
             <BurgerStack 

@@ -6,14 +6,14 @@ import Ingredient from './Ingredients'
 
 function IngredientList (props) {
 
-        
-          const allIngredients = this.props.ingredients.map((ingred, idx) => (
+        // error, not a function
+          const allIngredients = props.ingredients.map((ingred, idx) => (
 
             <li key={idx}>
                 <Ingredient 
                     ingredient={ingred}
                     itemKey={idx}
-                    clickFunc={this.props.add}
+                    clickFunc={props.add}
                 />
             </li>
           ))    
